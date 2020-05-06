@@ -289,7 +289,7 @@
 
                 <nav class="blog-pagination">
                     <a class="btn btn-outline-primary" href="#">Older</a>
-                    <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
+                    <a class="btn btn-outline-secondary " href="#" tabindex="-1" >Newer</a>
                 </nav>
 
             </div><!-- /.blog-main -->
@@ -344,83 +344,98 @@
     <script>
     
     /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar
-        EX12) Write a function to remove the Search Looking class item
-        EX13) Write a function to change the background of the jumbotron
-        EX14) Write a function to change the color of the main title
-        EX15) Write a function to change the column size for post headings
-        EX16) Write a function to remove all the links under "Elsewhere"
-        EX17) Write a function to trim just the first 150 characters for each blog post
-        EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-        EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+      
     */
     /* ex1 */
 /* EX11) Write a function to add a new link into the navbar*/
-function addLink() { 
-      
-      var myLink = document.createElement('a');  
-         
-       // Create the text node for anchor element. 
-       var link = document.createTextNode("This is the new link"); 
-         
-       // Append the text node to anchor element. 
-       myLink.appendChild(link);  
-         
-       // Set the title. 
-       myLink.title = "This is Link";  
-         
-       // Set the href property. 
-       myLink.href = "https://www.google.com";  
-         
-       // Append the anchor element to the body. 
+function addLink() {       
+      var myLink = document.createElement('a');        
+       var link = document.createTextNode("This is the new link");        
+       myLink.appendChild(link);          
+       myLink.title = "This is Link";        
+       myLink.href = "https://www.google.com";         
        var element = document.querySelector("nav");
 element.appendChild(myLink);
    } 
 /* EX12) Write a function to remove the Search Looking class item*/
-   function RemoveNav(){
-     var style = document.createElement('style');
-document.head.appendChild(style);
-style.sheet.insertRule('svg {display: none}');
+   function removeNav(){
+       let rem = document.querySelector('.text-muted svg')
+       rem.style.display = 'none'
+//      var style = document.createElement('style');
+// document.head.appendChild(style);
+// style.sheet.insertRule('svg {display: none}');
    }
 /*  EX13) Write a function to change the background of the jumbotron*/
    function changeColor(){
-   
-          let change = document.querySelector('.jumbotron');
-          change.classList.remove('bg-dark');
-          change.classList.add('bg-light');
-         }
+   let change = document.querySelector('.jumbotron ');
+    change.classList.remove('bg-dark');
+    change.classList.add('bg-light');
+    }
          
    
    /* EX14) Write a function to change the color of the main title*/
    function changeTitleColor(){
-     var style = document.createElement('style');
-document.head.appendChild(style);
-style.sheet.insertRule('.display-4{color:gold!important;}');
+     let style = document.querySelector('.jumbotron .col-md-6 .display-4')
+    style.style.color = 'yellow'
    }
 /*EX15) Write a function to change the column size for post headings*/
-   function changeH1Size(){
-     var style = document.createElement('style');
-document.head.appendChild(style);
-style.sheet.insertRule('h2{column-width: 10px;}');
+
+ 
+ function changeSize(){
+     let size1 = document.querySelector('.blog-post .blog-post-title')
+    for( i=0; i < size1.length; i++){
+        size1[i].classList.add('col-2');
+    // size1.classList.add('col-2')
+ }
    }
-   
 /*EX16) Write a function to remove all the links under "Elsewhere"*/
+
 function removeLinks(){
-var style = document.createElement('style');
-document.head.appendChild(style);
-style.sheet.insertRule('a {display: none}');
+let link = document.querySelector('aside div:nth-child(3) ol')
+console.log(link)
+link.style.display='none'
 }
+
 /* EX17) Write a function to trim just the first 150 characters for each blog post*/
+
 function trimPost() {
 let post = document.querySelectorAll(".blog-post")
-
 post.forEach(element => {
 element.getElementsByTagName("p")[1].innerText =  element.getElementsByTagName("p")[1].innerText.substring(150)  
 });
 }
 
+
+
+//ex18
+  let but = document.querySelector('.blog-pagination  .btn-outline-secondary');
+        but.addEventListener('click', new1);
+       function new1() {
+         let post1 =document.querySelector('.blog-post:last-of-type');
+         let post2 = document.createElement('div');
+         post1.classList.add('text');
+         let h2 = document.createElement('h2');
+         h2.innerHTML = 'Hello Text';
+         post2.appendChild(h2);
+         post1.append(post2);
+
+   }
+
+//    EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+
+   let butt = document.querySelector('.blog-pagination .btn-outline-primary');
+       butt.addEventListener('click', remove1);
+function remove1() {
+            let post =document.querySelector('.blog-post:last-of-type');
+        post.style.display = 'none';
+       }
+ // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+ let author = document.querySelectorAll('.blog-post-meta > a');
+for (i = 0; i < author.length; i++) {
+    author[i].addEventListener('mouseover', message);
+}function message() {
+ alert('author'); 
+}
     </script>
 </body>
 
