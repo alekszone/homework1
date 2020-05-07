@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+      <!-- EXERCISE 1
+        Use the specific bootstrap component to implement a Breadcrumb
+        -->
+​
+        
+<!-- EXERCISE 2
+    Create a Jumbotron section with a quick explanation / image of the website
+-->
+​
+<!-- EXERCISE 3
+    Foreach album in the favorite list, place the genre inside a badge
+-->
+​
+<!-- EXERCISE 4
+    Foreach album in the favorite list, use the Bootstrap Card to contain it.
+    Use card layouts to format it in the best and more compatible way.
+-->
+​
+<!-- EXERCISE 5
+    Place the tracklist inside a Bootstrap table.
+    The row column must be alternate.
+    Use one column for the track order, one of the title and one for the length.
+    (If you want, you can also add extra columns)
+-->
+​
+<!-- EXERCISE 6
+    Add a DELETE bootstrap button on each row of the tracklist.
+    Clicking on the button the row must disappear
+-->
+​
+<!-- EXERCISE 7
+    Add a "Contact Me" form in the footer.
+    The "Contact Me" form has 2 fields:
+    - Email
+    - Text of the message
+    Use the correct Bootstrap styles for styling the buttons
+-->
+​
+<!-- EXERCISE 8 
+    Add to the footer an extra column with the same links of the top nav.
+-->
+​
+ <!-- EXERCISE 9
+    Add a button "Add Track" under the track list the album
+-->
+​
+<!-- EXERCISE 10
+    On "Add Track" button, open a new modal.
+    The modal shall contain a form with:
+    - Track number
+    - Track name
+    - Track lenght
+    - Track featuring
+    - Live Track (checkbox)
+    The fields should be inside an Input Group and divided in 2 columns.
+-->
+​
+<!-- EXERCISE 11
+    Add 2 bootstrap buttons at the bottom of the modal window:
+    - Close => clear the fields and close the modal
+    - Add => Add the track to the list of tracks in the main page and display an alert success message 
+    https://getbootstrap.com/docs/4.3/components/alerts/
+    [EXTRA] Make the message disappear after 5 seconds
+    https://www.w3schools.com/jsref/met_win_settimeout.asp
+-->
+
+<!-- EXERCISE 12
+    All the field (except for Feat. and Live Track) are required fields and requires validation.
+    If the user clicks on the Add button and some fields are empty, a warning alert must be show
+-->
+​
+<!-- EXERCISE 13
+    For each "Album cover" in your page, add a tooltip with the title
+-->
+​
+<!-- EXERCISE 14
+    Update the header and footer links using scrollspy to render a smooth transition to the parts of the document.
+-->
+​
+ <!-- EXERCISE 15
+    Add a Album Carousel with controls to display the top 10 albums
+-->
+​
+<!-- EXERCISE 16
+    Make every section of the page "collapsable" if the user clicks on the section title
+-->
+  </head>
+  <body>
+    
+  
+    <nav  aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item "> <a href="#"> Data</a></li>
+      
+      </ol>
+    </nav>
+ <div class="container">
+    <div class="jumbotron row row-cols-2 bg-dark ">
+      <div  class="col-6">
+       <img src="life.jpg" alt="img" style="width: 80%; position: relative;" >
+     </div>
+     <div class="col-6 " style="color:white;">
+      <h1 class="display-4">Welcome</h1>
+      <p class="lead">My Album</p>
+     <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown 
+       printer took a galley of type and scrambled it to make a type specimen book. It has survived not 
+       only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+         and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">More</a>
+    </div>
+</div>
+</div>
+<div class="container  m-6" >
+  <h2 class="text-center">My favorite</h2>
+<div class="card-deck">
+  <div class="card">
+    <img src="metalica.jpg" class="card-img-top" data-toggle="tooltip" title="Fresh Album" alt="...">
+    <div class="card-body">
+      <h2 class="card-title ">Metalica<span class="badge badge-secondary " style="font-size: small; margin-left: 50%;">Hip Hop</span></h2>
+   
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="linkin park.jpg" class="card-img-top" data-toggle="tooltip" title="New Album"
+    alt="...">
+    <div class="card-body">
+      <h2 class="card-title ">Linkin Park<span class="badge badge-secondary " style="font-size: small; margin-left: 40%;">Pop</span></h2>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="3 doors  down.jpg" class="card-img-top" data-toggle="tooltip" title="Old Album" alt="...">
+    <div class="card-body">
+      <h2 class="card-title ">3 Doors Down<span class="badge badge-secondary " style="font-size: small; margin-left: 30%;">Hip Hop</span></h2>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container mt-5">
+  <h2 class="text-center" >Track List</h2>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Tittle</th>
+        <th scope="col">Duration</th>
+      </tr>
+    </thead>
+    <tbody class="tab">
+      <tr class="remove">
+        <th scope="row">1</th>
+        <td>Eminem</td>
+        <td>Godzillak</td>
+        <td>3:12 min<button type="button" class="btn btn-primary ml-5" onclick="remove()">Delete</button></td>
+      </tr>
+      <tr class="remove1">
+        <th scope="row">2</th>
+        <td>Linkin Par</td>
+        <td>Numb</td>
+        <td>4 min<button type="button" class="btn btn-primary ml-5" onclick="remove1()">Delete</button></td>
+      </tr>
+      <tr class="remove2">
+        <th scope="row">3</th>
+        <td>3 Doors Down</td>
+        <td>The Bird</td>
+        <td>3:55 min <button type="button" class="btn btn-primary ml-5" onclick="remove2()">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+ 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal " onclick="add()">
+  Add Truck
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+     
+       
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col">Tittle</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody class="tab">
+            <tr class="remove">
+              <th scope="row">1</th>
+              <td>Eminem</td>
+              <td>Godzillak</td>
+              <td>3:12 min</td>
+            </tr>
+            </tbody>
+      </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div></button>
+
+
+</div>
+<footer class=" bg-dark justify-content-space-between">
+  <form class="container form-inline  justify-content-center row row-col-2">
+    <div class="mb-2 col-3 ">
+    <label for="validationTextarea"></label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" ></textarea>
+   
+  </div>
+    <div class="form-group mb-2 col-3 " >  
+      <label for="staticEmail2" class="sr-only" >Email</label>
+      <input type="text"  class="form-control-plaintext " id="staticEmail2" style="color: white; border:white solid 2px;" >
+    </div>
+       <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+      </form>
+      <button type="submit" class="btn btn-primary mb-2 "><a style="color: white;" href="#">Back to top</a></button>
+
+
+</footer>
+
+<script>
+function remove(){
+  let rem = document.querySelector(".table .remove")
+rem.style.display="none";
+}
+function remove1(){
+  let rem = document.querySelector(".table .remove1")
+rem.style.display="none";
+}
+function remove2(){
+  let rem = document.querySelector(".table .remove2")
+rem.style.display="none";
+}
+
+function add(){
+let tab = document.querySelector(".table .tab")
+console.log(tab)
+let el = document.createElement('tr')
+el.classList.add('remove4')
+let zero = document.createElement("th")
+let one =document.createElement('td')
+let two = document.createElement('td')
+let three = document.createElement('td')
+zero.innerText="4"
+one.innerText="name"
+two.innerText="song"
+three.innerText="3:00 min"
+el.append(zero,one,two,three)
+tab.appendChild(el)
+
+}
+
+
+
+</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
